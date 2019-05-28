@@ -169,6 +169,7 @@ declare namespace metrics {
 
   class GraphiteReporter extends ScheduledReporter {
     constructor(registry: Report);
+    constructor(registry: Report, prefix: string, host: string, port: number);
     report: () => void;
     send: (name: string, value: number, timestamp: number) => void;
     reportCounter: (counter: Counter, timestamp: number) => void;
